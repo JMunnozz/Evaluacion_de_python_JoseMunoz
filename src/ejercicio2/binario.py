@@ -11,6 +11,6 @@ def esBinario(strbinario):
 
 if esBinario(strbinario):
     binarioEnDecimal = int(strbinario, 2)
-    print(strbinario)
+    print(binarioEnDecimal)
 else:
     print("Quieto bicho. Ese numero no es binario.")
