@@ -1,16 +1,16 @@
 #Programa creado por José Muñoz Sánchez
 
-numero_binario = input("Introduce un número binario: ")
+strbinario = input("Introduce un número binario: ")
 
 
-def esBinario(numero_binario):
-    for caracter in numero_binario:
+def esBinario(strbinario):
+    for caracter in strbinario:
         if caracter not in '01':
             return False
     return True
 
-if esBinario(numero_binario):
-    binarioEnDecimal = int(numero_binario, 2)
-    print(binarioEnDecimal)
+if esBinario(strbinario):
+    binarioEnDecimal = int(strbinario, 2)
+    print(strbinario)
 else:
     print("Quieto bicho. Ese numero no es binario.")
