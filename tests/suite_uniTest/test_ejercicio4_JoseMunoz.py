@@ -23,13 +23,13 @@ class TestEsBinario(unittest.TestCase):
 
     def test_binario_con_espacios(self):
         #Se comprueba si acepta espacios entre los numeros
-        self.assertEqual(esBinario("1010 101"), False)
+        self.assertEqual(esBinario("1         0    10 101       "), False)
 
     def test_binario_vacio(self):
         #Se comprueba si acepta una cadena vacia
         self.assertEqual(esBinario(""), True)
 
-    def test_bucle_infinito(self):
+    def test_bucle_while(self):
         #Se comprueba si acepta un bucle infinito
         self.assertEqual(esBinario("while True: pass"), False)
 
@@ -39,9 +39,9 @@ class TestEsBinario(unittest.TestCase):
 
     def test_salto_de_linea(self):
         #Da un salto de linea si se lo insertamos?
-        self.assertEqual(esBinario("1010\n101"), False)
+        self.assertEqual(esBinario("1010\n10\n1\n"), False)
 
-    def test_vacio(self):
+    def test_espacio_vacio(self):
         #Comprobamos si acepta una cadena vacia
         self.assertEqual(esBinario(""), True)
 
@@ -88,7 +88,7 @@ class TestEstaEnRangoYEstaEnLista(unittest.TestCase):
         #Como reacciona frente a comandos
         self.assertEqual(estaEnLista("ls", ["usuario1", "usuario2"]), False)
     
-    def test_bucle_infinito(self):
+    def test_bucle_while(self):
         #Como reacciona frente a un bucle while
         self.assertEqual(estaEnLista("while True: pass", ["usuario1", "usuario2"]), False)
 
