@@ -56,10 +56,11 @@ def tes_numero_muyLargo():
     assert estaEnRango(numero_largo, 0, int(numero_largo)+14) == True
 
 def test_comando():
-    assert estaEnRango("ls", 0, 10) == False
+
+        assert estaEnRango("ls", 0, 10) == False
 
 def test_ddos():
-    assert estaEnRango("GATO" * 1000000000, 10, 0) == False
+        assert estaEnRango("GATO" * 1000000000, 10, 0) == False
 
 
 #Tests para la funcion estaEnLista
@@ -79,4 +80,5 @@ def test_while_lista():
     assert estaEnLista("while True: pass", ["usuario1", "usuario2", "usuario3"]) == False
 
 def test_ddos_lista():
-    assert estaEnLista("G"*10000000, ["usuario1", "usuario2", "usuario3"]) == False
+
+        assert estaEnLista("G"*10000000, ["usuario1", "usuario2", "usuario3"]) == False
